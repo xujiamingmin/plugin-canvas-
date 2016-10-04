@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 50px 0;
+            background-color: #666;
+        }
+        ul,li {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        ul li {
+            float: left;
+            width: 33%;
+            text-align: center;
+        }
+    </style>
+    <!--引入定义好的插件-->
+    <script type="text/javascript" src="drawCircle.js"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            drawCircle({
+                id: 'one',
+                color: '#0000ff',
+                angle: 0.5,
+                lineWidth: 5
+            });
+
+            drawCircle({
+                id: 'two',
+                angle: 0.75,
+                color: '#ff0000',
+                lineWidth: 12
+            });
+
+            drawCircle({
+                id: 'three',
+                angle: 1,
+                lineWidth: 15,
+                color: 'grd'
+            });
+        };
+    </script>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li>
+                <canvas id="one" width="200" height="200"></canvas>
+            </li>
+            <li>
+                <canvas id="two" width="200" height="200"></canvas>
+            </li>
+            <li>
+                <canvas id="three" width="200" height="200"></canvas>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
